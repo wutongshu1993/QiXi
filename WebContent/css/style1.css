@@ -1,0 +1,257 @@
+@CHARSET "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+ul li{
+	list-style-type:none;
+}
+/* li:nth-child(2) {
+       background: #9BCD9B;
+   }
+   
+   li:nth-child(3) {
+       background: yellow;
+   } */
+#content{
+		width    : 100%;
+        height   : 100%;
+        overflow : hidden;
+        position : absolute;
+       
+}
+.content-wrap{
+	position:relative;
+}
+.content-wrap > li {
+        float: left;
+        overflow: hidden;
+        position: relative;
+    }
+    button {
+        width: 100px;
+        height: 50px;
+    }
+    
+    .button {
+        position: absolute;
+        bottom: 0;
+    }
+.charector {
+        width: 151px;
+        height: 291px;
+        background: url(../images/boy.png) -0px -291px no-repeat;
+        position: absolute;
+        /* 设置一个元素的坐标 */
+        left: 6%;
+        top: 55%;
+    }
+    .slowWalk {
+         /* 填入动画样式规则 */
+         animation:person-slow 950ms infinite;
+-moz-animation:person-slow 950ms infinite; /* Firefox */
+-webkit-animation:person-slow 950ms infinite; /* Safari and Chrome */
+-o-animation:person-slow 950ms infinite; /* Opera */
+-webkit-animation-timing-function: steps(1, start);
+animation-timing-function: steps(1, start);
+    }
+     @-webkit-keyframes person-slow {
+        0% {
+            background-position: -0px -291px;
+        }
+        25% {
+            background-position: -602px -0px;
+        }
+        50% {
+            background-position: -302px -291px;
+        }
+        75% {
+            background-position: -151px -291px;
+        }
+        100% {
+            background-position: -0px -291px;
+        }
+       
+    }
+    
+    @-moz-keyframes person-slow {
+        0% {
+            background-position: -0px -291px;
+        }
+        25% {
+            background-position: -602px -0px;
+        }
+        50% {
+            background-position: -302px -291px;
+        }
+        75% {
+            background-position: -151px -291px;
+        }
+        100% {
+            background-position: -0px -291px;
+        }
+    }
+    
+     .person-move{
+     
+     }
+    
+  /* 人物暂停 */
+        .pauseWalk {
+            -webkit-animation-play-state: paused;
+            -moz-animation-play-state: paused;
+        } 
+ .slowFlowerWalk{
+  -webkit-animation-name: person-floler-slow;
+       -webkit-animation-duration: 950ms;
+       -webkit-animation-iteration-count: infinite;
+       -webkit-animation-timing-function: step-start;
+       -moz-animation-name: person-floler-slow;
+       -moz-animation-duration: 950ms;
+       -moz-animation-iteration-count: infinite;
+       -moz-animation-timing-function: step-start;
+ }
+ 
+.boyOriginal {
+     background-position: -150px -0px;
+    }        
+/*带花*/
+   
+   @-webkit-keyframes person-floler-slow {
+       0% {
+           background-position: -453px -0px;
+       }
+       25% {
+           background-position: -904px -0px;
+       }
+       50% {
+           background-position: -451px -0px;
+       }
+       75% {
+           background-position: -753px -0px;
+       }
+       100% {
+           background-position: -300px -0px;
+       }
+   }
+   
+   @-moz-keyframes person-floler-slow {
+       0% {
+           background-position: -453px -0px;
+       }
+       25% {
+           background-position: -904px -0px;
+       }
+       50% {
+           background-position: -451px -0px;
+       }
+       75% {
+           background-position: -753px -0px;
+       }
+       100% {
+           background-position: -300px -0px;
+       }
+   } 
+   
+    .boy-rotate {
+       -webkit-animation-name: boy-rotate;
+       -webkit-animation-duration: 850ms;
+       -webkit-animation-iteration-count: 1;
+       -webkit-animation-timing-function: step-start;
+       -webkit-animation-fill-mode: forwards;
+       -moz-animation-name: boy-rotate;
+       -moz-animation-duration: 850ms;
+       -moz-animation-iteration-count: 1;
+       -moz-animation-timing-function: step-start;
+       -moz-animation-fill-mode: forwards;
+   }
+   
+   @-webkit-keyframes boy-rotate {
+       0% {
+           background-position: -603px -291px;
+       }
+       16.7% {
+           background-position: -150px -0px;
+       }
+       33.4% {
+           background-position: -453px -291px;
+       }
+       50.1% {
+           background-position: -0px -0px;
+       }
+       66.8% {
+           background-position: -903px -291px;
+       }
+       83.5% {
+           background-position: -753px -291px;
+       }
+       100% {
+           background-position: -603px -291px;
+       }
+   }
+   
+   @-moz-keyframes boy-rotate {
+       0% {
+           /*background-position: -603px -291px;*/
+       }
+       16.7% {
+           background-position: -150px -0px;
+       }
+       33.4% {
+           background-position: -453px -291px;
+       }
+       50.1% {
+           background-position: -0px -0px;
+       }
+       66.8% {
+           background-position: -903px -291px;
+       }
+       83.5% {
+           background-position: -753px -291px;
+       }
+       100% {
+           background-position: -603px -291px;
+       }
+   }
+ .bird{
+ 	min-width: 91px;
+    min-height: 71px;
+ 	top: 10%;
+    position: absolute;
+    z-index: 10;
+    right: -91px;
+    background: url(../images/bird.png) -182px 0px no-repeat;} 
+ .birdFly{
+ -webkit-animation-name: bird-slow;
+       -webkit-animation-duration: 550ms;
+       -webkit-animation-iteration-count: infinite;
+       -webkit-animation-timing-function: step-start;
+       -moz-animation-name: bird-slow;
+       -moz-animation-duration: 550ms;
+       -moz-animation-iteration-count: infinite;
+       -moz-animation-timing-function: step-start;
+ }  
+   @-webkit-keyframes bird-slow {
+    0% { background-position: -182px 0px; }
+    50% {background-position: 0px 0px;}
+    75% {background-position: -91px 0px;}
+    100% {background-position: -182px 0px;}
+}
+@-moz-keyframes bird-slow {
+    0% { background-position: -182px 0px; }
+    50% {background-position: 0px 0px;}
+    75% {background-position: -91px 0px;}
+    100% {background-position: -182px 0px;}
+}
+@keyframes bird-slow {
+    0% { background-position: -182px 0px; }
+    50% {background-position: 0px 0px;}
+    75% {background-position: -91px 0px;}
+    100% {background-position: -182px 0px;}
+}
+@-o-keyframes bird-slow {
+    0% { background-position: -182px 0px; }
+    50% {background-position: 0px 0px;}
+    75% {background-position: -91px 0px;}
+    100% {background-position: -182px 0px;}
+}
